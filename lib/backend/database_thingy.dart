@@ -37,6 +37,8 @@ class JsonDB {
   Future<void> getAllData() async {
     wallsData = dataJson["database"];
     List wallsIndexGlobal = dataJson["index"];
+    allWallLink.clear();
+    allWallLinkShuffled.clear();
     for (var indexglob = 0; indexglob < wallsIndexGlobal.length; indexglob++) {
       var jumlahWall = wallsData[indexglob]["wall_link"].length;
       for (var i = 0; i < jumlahWall; i++) {
